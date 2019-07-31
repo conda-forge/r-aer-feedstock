@@ -1,4 +1,4 @@
-{% set version = "1.2-6" %}
+{% set version = "1.2-7" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,11 +12,11 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/AER_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/AER/AER_{{ version }}.tar.gz
-  sha256: 653c3a2d253819e0ce8c2cf12cff2ab222bf3d19dbf382b7c4b4c3d762469474
+  sha256: 3aee5c606313710c2dca6c1e9b2c20a145aa33f2a3ecc5cfcec66c8e91838a93
 
 build:
   noarch: generic
-  number: 1001
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/

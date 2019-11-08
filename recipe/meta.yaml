@@ -27,7 +27,7 @@ requirements:
     - r-formula >=0.2_0
     - r-car >=2.0_19
     - r-lmtest
-    - r-sandwich
+    - r-sandwich >=2.4_0
     - r-survival >=2.37_5
     - r-zoo
   run:
@@ -35,7 +35,7 @@ requirements:
     - r-formula >=0.2_0
     - r-car >=2.0_19
     - r-lmtest
-    - r-sandwich
+    - r-sandwich >=2.4_0
     - r-survival >=2.37_5
     - r-zoo
 
@@ -46,15 +46,16 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=AER
-  license: GPL (>= 2)
+  license: GPL-2 | GPL-3
   summary: |
     Functions, data sets, examples, demos, and vignettes for the book Christian Kleiber
     and Achim Zeileis (2008), Applied Econometrics with R, Springer-Verlag, New York.
     ISBN 978-0-387-77316-2. (See the vignette "AER" for a package overview.)
   license_family: GPL3
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - johanneskoester
-    - bgruening

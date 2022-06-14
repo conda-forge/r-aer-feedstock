@@ -1,5 +1,4 @@
 {% set version = "1.2-10" %}
-
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -14,8 +13,9 @@ source:
   sha256: 650a5fb54a8addf8c86f1e0f88f4fac5349731bc5bf34762a991022140eedbdc
 
 build:
-  noarch: generic
+  merge_build_host: True  # [win]
   number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -40,14 +40,13 @@ requirements:
 
 test:
   commands:
-    - $R -e "library('AER')"  # [not win]
+    - $R -e "library('AER')"           # [not win]
     - "\"%R%\" -e \"library('AER')\""  # [win]
 
 about:
   home: https://CRAN.R-project.org/package=AER
   license: GPL-2.0-or-later
-  summary: |
-    Functions, data sets, examples, demos, and vignettes for the book Christian Kleiber
+  summary: Functions, data sets, examples, demos, and vignettes for the book Christian Kleiber
     and Achim Zeileis (2008), Applied Econometrics with R, Springer-Verlag, New York.
     ISBN 978-0-387-77316-2. (See the vignette "AER" for a package overview.)
   license_family: GPL3

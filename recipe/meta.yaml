@@ -8,10 +8,9 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: AER_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/AER_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/AER/AER_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/AER_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/AER/AER_{{ version }}.tar.gz
   sha256: 650a5fb54a8addf8c86f1e0f88f4fac5349731bc5bf34762a991022140eedbdc
 
 build:
@@ -46,7 +45,7 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=AER
-  license: GPL-2 | GPL-3
+  license: GPL-2.0-or-later
   summary: |
     Functions, data sets, examples, demos, and vignettes for the book Christian Kleiber
     and Achim Zeileis (2008), Applied Econometrics with R, Springer-Verlag, New York.

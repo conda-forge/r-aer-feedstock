@@ -1,11 +1,11 @@
-About r-aer
-===========
+About r-aer-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-aer-feedstock/blob/main/LICENSE.txt)
 
 Home: https://CRAN.R-project.org/package=AER
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-aer-feedstock/blob/main/LICENSE.txt)
 
 Summary: Functions, data sets, examples, demos, and vignettes for the book Christian Kleiber and Achim Zeileis (2008), Applied Econometrics with R, Springer-Verlag, New York. ISBN 978-0-387-77316-2. (See the vignette "AER" for a package overview.)
 

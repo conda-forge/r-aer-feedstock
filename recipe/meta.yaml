@@ -1,4 +1,4 @@
-{% set version = "1.2-14" %}
+{% set version = "1.2-15" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/AER_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/AER/AER_{{ version }}.tar.gz
-  sha256: 46a86156d819a1ba3ac82b7f81d9d416bf9a0e5a73ab5e3a3c0030df5e80871a
+  sha256: b04c8ab3eea443315f9d30dbea379b54e4683234f3f8528066d0c7a6edc81f45
 
 build:
   number: 0
